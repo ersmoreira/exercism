@@ -6,7 +6,11 @@ public class Hamming {
     public Hamming(String leftStrand, String rightStrand) {
         this.leftStrand = leftStrand;
         this.rightStrand = rightStrand;
-        if (leftStrand.length() != rightStrand.length()) {
+        if (leftStrand.isEmpty() && !rightStrand.isEmpty()) {
+            throw new IllegalArgumentException("left strand must not be empty.");
+        } else if (rightStrand.isEmpty() && !leftStrand.isEmpty()) {
+            throw new IllegalArgumentException("right strand must not be empty.");
+        } else if (leftStrand.length() != rightStrand.length()) {
             throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
         }
     }
