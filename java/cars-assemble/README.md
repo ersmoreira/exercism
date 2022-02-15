@@ -1,4 +1,4 @@
-# Cars, Assemble!
+ # Cars, Assemble!
 
 Welcome to Cars, Assemble! on Exercism's Java Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
