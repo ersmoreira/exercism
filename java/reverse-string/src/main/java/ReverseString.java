@@ -1,7 +1,8 @@
 class ReverseString {
 
     String reverse(String inputString) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        StringBuilder aux = new StringBuilder(inputString);
+        return aux.reverse().toString();
     }
   
 }
