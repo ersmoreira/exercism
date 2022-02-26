@@ -2,33 +2,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LanguageList {
-    private final List<String> languages = new ArrayList<>();
 
-    public boolean isEmpty() {
-        throw new UnsupportedOperationException("Please implement the isEmpty() method");
-    }
+  private final List<String> languages = new ArrayList<>();
 
-    public void addLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the addLanguage() method");
-    }
+  public boolean isEmpty() {
+    return this.languages.isEmpty();
+  }
 
-    public void removeLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the removeLanguage() method");
-    }
+  public void addLanguage(String language) {
+    this.languages.add(language);
+  }
 
-    public String firstLanguage() {
-        throw new UnsupportedOperationException("Please implement the firstLanguage() method");
-    }
+  public void removeLanguage(String language) {
+    this.languages.remove(language);
+  }
 
-    public int count() {
-        throw new UnsupportedOperationException("Please implement the count() method");
+  public String firstLanguage() {
+    if (!this.isEmpty()) {
+      return this.languages.get(0);
+    } else {
+      return "";
     }
+  }
 
-    public boolean containsLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the containsLanguage() method");
-    }
+  public int count() {
+    return this.languages.size();
+  }
 
-    public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
-    }
+  public boolean containsLanguage(String language) {
+    return this.languages.contains(language);
+  }
+
+  public boolean isExciting() {
+    return (this.containsLanguage("Java") || this.containsLanguage("Kotlin"));
+  }
 }
